@@ -1181,53 +1181,7 @@ p {
 .sponsors-eight .single-services:hover {
   box-shadow: var(--shadow-4);
 }
-.sponsors-eight .single-services:hover .service-icon {
-  color: var(--white);
-  border-color: transparent;
-  background: var(--primary);
-}
-.sponsors-eight .single-services:hover .service-icon::after {
-  opacity: 1;
-  visibility: visible;
-}
-.sponsors-eight .single-services .service-icon {
-  width: 78px;
-  height: 78px;
-  border-radius: 50%;
-  margin-bottom: 25px;
-  background: var(--white);
-  border: 2px solid var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-  font-size: 40px;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-  position: relative;
-}
-.sponsors-eight .single-services .service-icon::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  background: var(--primary);
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-  z-index: -1;
-  border-radius: 50%;
-  border: 1px solid transparent;
-}
+
 .sponsors-eight .single-services .service-content h4 {
   font-size: 20px;
   font-weight: 600;
@@ -1262,17 +1216,41 @@ p {
   }
 }
 .pricing-area  .single-news {
-  margin-top: 30px;
+  margin-top: 15px;
+  align-items: center !important;
 }
+
 .pricing-area  .single-news .image {
   position: relative;
   border-radius: 4px;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 .pricing-area  .single-news .image img {
-  height: 100% !important;
+  height: 250px;
   width: 100% !important;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
   transition: all 0.4s ease;
+}
+
+.pricing-area .container {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-area .row {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+}
+.col-lg-4 .col-md-6 .col-12 {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center; /* Center the icons vertically (if the container has height) */
+  flex-wrap: wrap; /* Wrap icons if they exceed the container width */
+  text-align: center; /* This is optional and helps in centering inline content */
 }
 
 .pricing-area  .single-news .content-body .title {
@@ -1280,20 +1258,30 @@ p {
 }
 .pricing-area  .single-news .content-body .title a {
   color: var(--black);
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+
 }
-.pricing-area  .single-news .content-body .title a:hover {
-  color: var(--primary);
-}
+
 .pricing-area  .single-news .content-body p {
   color: var(--dark-3);
 }
-.pricing-area  .single-news:hover .image .thumb {
-  transform: scale(1.1) rotate(1deg);
+
+
+.pricing-area .single-news .button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%; /* Makes the button full width */
+    text-align: center; /* Centers the text */
+}
+
+.single-news .button a {
+    width: 100%; /* Makes the actual button full width */
+    text-align: center; /* Centers the text inside the button */
+    padding: 12px 0; /* Adjust padding for button height */
+    display: block; /* Ensures the anchor behaves like a block-level element */
+    box-sizing: border-box; /* Ensures padding doesn't exceed the button's width */
 }
 
 
@@ -1413,7 +1401,13 @@ p {
   transform: translateY(-5px);
 }
 .brand-area .clients-logos img {
-  max-width: 170px;
+  height:140px !important;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.brand-area .clients-logos .nord img {
+  height:95px !important;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
@@ -1496,12 +1490,93 @@ p {
 }
 
 /*======================================
+	Our Team CSS
+========================================*/
+
+.team-style-one {
+  position: relative;
+  margin-top: 30px;
+  box-shadow: var(--shadow-2);
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+.team-style-one:hover {
+  box-shadow: var(--shadow-4);
+}
+.team-style-one .team-image img {
+  width: 100%;
+}
+.team-style-one .team-content {
+  padding: 20px 15px;
+  width: 100%;
+  background-color: var(--white);
+}
+.team-style-one .team-content .name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: var(--black);
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .team-style-one .team-content .name {
+    font-size: 20px;
+  }
+}
+.team-style-one .team-content .sub-title {
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--dark-3);
+  margin-top: 2px;
+  display: block;
+}
+.team-style-one .team-content .social {
+  margin-top: 12px;
+}
+.team-style-one .team-content .social li {
+  display: inline-block;
+  margin: 0 4px;
+}
+.team-style-one .team-content .social li a {
+  font-size: 16px;
+  color: var(--gray-1);
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  line-height: 35px;
+  border: 1px solid var(--gray-4);
+  border-radius: 50%;
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+.team-style-one .team-content .social li a:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: transparent;
+}
+
+
+
+
+/*======================================
 	Spotlight CSS
 ========================================*/
 
 .spotlight-section {
   text-align: center;
-  background-color: var(--white);
+  background-color: var(--light-3);
   padding: 70px 0;
 }
 
@@ -1571,7 +1646,10 @@ text-align: center; /* This is optional and helps in centering inline content */
 }
 
 
-/* Footer eleven css */
+
+/*======================================
+	Footer CSS
+========================================*/
 
 .logo .footer-eleven img{
   height: 45px;
@@ -1584,7 +1662,7 @@ text-align: center; /* This is optional and helps in centering inline content */
 .footer-eleven {
   padding-top: 100px;
   padding-bottom: 70px;
-  background-color: var(--light-3);
+  background-color: var(--light-3) !important;
   position: relative;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
