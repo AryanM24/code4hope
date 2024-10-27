@@ -3,3 +3,4 @@ Code 4 Hope is fiscally sponsored by The Hack Foundation (d.b.a. Hack Club), a 5
 
 # ImpactX
 ImpactX is Code4Hope's debut hackathon event
+Innovate for a better world by solving challenges in sustainability, health and wellness, and education—where your ideas today shape a brighter, more sustainable tomorrow. Sign up at [https://impactx-code4hope.devpost.com/]([url](https://impactx-code4hope.devpost.com/))
